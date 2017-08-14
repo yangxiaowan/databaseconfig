@@ -37,7 +37,7 @@ public class AutoFormatBean implements Serializable {
 	/**
 	 * 服务名
 	 */
-	private String service;
+	private String serviceName;
 	
 	/**
 	 * 方法名
@@ -94,12 +94,12 @@ public class AutoFormatBean implements Serializable {
 		this.mdValue = mdValue;
 	}
 
-	public String getService() {
-		return service;
+	public String getServiceName() {
+		return serviceName;
 	}
 
-	public void setService(String service) {
-		this.service = service;
+	public void setServiceName(String serviceName) {
+		this.serviceName = serviceName;
 	}
 
 	public String getInterfaceName() {

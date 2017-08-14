@@ -4,8 +4,10 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
+import java.sql.Connection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -18,9 +20,14 @@ import com.yangwan.bean.AutoFormatBean;
 public class MDValueFormatUtil{
 
 	/**
+	 * 数据库操作工具
+	 */
+	private DataBaseUtils dataBaseUtils;
+	
+	/**
 	 * 存储接口信息的列表
 	 */
-	private List<AutoFormatBean> autoFormatList;
+	private Map<String, AutoFormatBean> autoFormatMap;
 	
 	/**
 	 * 解析文件路径
@@ -38,13 +45,13 @@ public class MDValueFormatUtil{
 	
 	public static final int VALUE_LINE = 2;
 	
-	public MDValueFormatUtil(List<AutoFormatBean> autoFormatList, String filePath) {
-		this.autoFormatList = autoFormatList;
+	public MDValueFormatUtil(Map<String, AutoFormatBean> autoFormatMap, String filePath) {
+		this.autoFormatMap = autoFormatMap;
 		this.filePath = filePath;
 	}
 	
-	public MDValueFormatUtil(List<AutoFormatBean> autoFormatList) {
-		this.autoFormatList = autoFormatList;
+	public MDValueFormatUtil(Map<String, AutoFormatBean> autoFormatMap) {
+		this.autoFormatMap = autoFormatMap;
 	}
 	
 	/**
@@ -78,8 +85,8 @@ public class MDValueFormatUtil{
 	 * @return
 	 */
 	public void autoAnalysisProcess(){
-		if(autoFormatList == null){
-			autoFormatList = new ArrayList<AutoFormatBean>();
+		if(autoFormatMap == null){
+			autoFormatMap = new HashMap<String, AutoFormatBean>();
 		}
 		FileInputStream fis = null;
 		BufferedReader br = null;
@@ -105,7 +112,7 @@ public class MDValueFormatUtil{
 					 m = r.matcher(lineContent);
 					 if (m.find()) {
 						 tempBean.setModuleName(m.group(2)); //设置模块名
-						 tempBean.setService(m.group(4));   //设置服务名
+						 tempBean.setServiceName(m.group(4));   //设置服务名
 						 tempBean.setInterfaceName(m.group(6));  //设置接口名
 					 }
 					break;
@@ -115,7 +122,8 @@ public class MDValueFormatUtil{
 					 m = r.matcher(lineContent);
 					 if (m.find()) {
 						 tempBean.setMdValue(m.group(3)); //设置md5值
-						 autoFormatList.add(tempBean);
+						 
+						 autoFormatMap.put("", tempBean);
 						 tempBean = new AutoFormatBean();
 					 }
 					 break;
@@ -129,12 +137,30 @@ public class MDValueFormatUtil{
 		}
 	}
 	
-	public List<AutoFormatBean> getAutoFormatList() {
-		return autoFormatList;
+	public void saveToDataBase() throws Exception{
+		if(dataBaseUtils != null){
+			dataBaseUtils.getConnectionToSQL();
+			Connection connection = dataBaseUtils.getConnection();
+			
+		}else{
+			System.out.print(MDValueFormatUtil.class.toString() + "DataBaseUtils为空");
+		}
+	}
+	
+	public DataBaseUtils getDataBaseUtils() {
+		return dataBaseUtils;
 	}
 
-	public void setAutoFormatList(List<AutoFormatBean> autoFormatList) {
-		this.autoFormatList = autoFormatList;
+	public void setDataBaseUtils(DataBaseUtils dataBaseUtils) {
+		this.dataBaseUtils = dataBaseUtils;
+	}
+	
+	public Map<String, AutoFormatBean> getAutoFormatList() {
+		return autoFormatMap;
+	}
+
+	public void setAutoFormatList(Map<String, AutoFormatBean> autoFormatMap) {
+		this.autoFormatMap = autoFormatMap;
 	}
 
 	public String getFilePath() {
