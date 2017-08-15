@@ -10,24 +10,24 @@ import org.junit.Test;
 public class DataBaseUtils {
 
 	/**
-	 * Êı¾İ¿âµØÖ·
+	 * æ•°æ®åº“åœ°å€
 	 */
 	private static final String databasePath = "jdbc:mysql://172.25.103.231:3306/autoformat";  
 	
     private static final String driverPath = "com.mysql.jdbc.Driver";  
     
     /**
-     * Êı¾İ¿âÓÃ»§Ãû
+     * ç”¨æˆ·å
      */
     private String userName = "root";  
     
     /**
-     * Êı¾İ¿âÃÜÂë
+     * å¯†ç 
      */
     private String password = "beyonddream";  
     
     /**
-     * Êı¾İ¿âÁ´½Ó
+     * é“¾æ¥
      */
     private Connection connection = null;  
     
@@ -37,7 +37,7 @@ public class DataBaseUtils {
         } catch (ClassNotFoundException e) {  
             e.printStackTrace();  
         }  
-        System.out.println("¼ÓÔØÊı¾İ¿âÇı¶¯³É¹¦");  
+        System.out.println("åŠ è½½æ•°æ®åº“é©±åŠ¨æˆåŠŸ");  
     }  
     
     public boolean getConnectionToSQL(){  
@@ -58,7 +58,8 @@ public class DataBaseUtils {
     public void testDataBase(){
     	DataBaseUtils dataBaseUtils = new DataBaseUtils();
     	if(dataBaseUtils.getConnectionToSQL()){
-    		System.out.println("»ñµÃÊı¾İ¿âÁ¬½Ó");
+    		System.out.println("è¿æ¥æ•°æ®åº“æˆåŠŸ");
     	}
     }
+    
 }

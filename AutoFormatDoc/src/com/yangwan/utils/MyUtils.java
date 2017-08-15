@@ -1,5 +1,6 @@
 package com.yangwan.utils;
 
+
 public class MyUtils {
 
 	/**
@@ -8,8 +9,8 @@ public class MyUtils {
 	 * @param interfaceName  ½Ó¿ÚÃû
 	 * @return
 	 */
-	public static String generateUniqueCode(String serviceName, String interfaceName){
-		return null;
+	public static Integer generateUniqueCode(String value){
+		return value.hashCode();
 	}
 	
 }

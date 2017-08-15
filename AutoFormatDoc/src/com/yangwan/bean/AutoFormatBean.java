@@ -10,24 +10,24 @@ public class AutoFormatBean implements Serializable {
 	private static final long serialVersionUID = 6812628377097840538L;
 
 	/**
-	 * ¼ÇÂ¼±àºÅ
+	 * ç¼–å·
 	 */
 	private Integer id;
 	
 	/**
-	 * Ä£¿éÃû ÀıÈç:cash, cash-special
+	 * ç‰¹æ®Šæ ‡è¯†Code
+	 */
+	private Integer uniqueCode;
+	
+	/**
+	 * æ¨¡å—å ä¾‹å¦‚:cash, cash-special
 	 */
 	private String moduleName;
 	
 	/**
-	 * Á¥ÊôÒ³ÃæÃû
+	 * é¡µé¢å
 	 */
 	private String pageName;
-	
-	/**
-	 * ¹¦ÄÜÃû
-	 */
-	private String functionName;
 	
 	/**
 	 * MD5Öµ
@@ -35,22 +35,22 @@ public class AutoFormatBean implements Serializable {
 	private String mdValue;
 	
 	/**
-	 * ·şÎñÃû
+	 * æœåŠ¡å
 	 */
 	private String serviceName;
 	
 	/**
-	 * ·½·¨Ãû
+	 * æ¥å£å
 	 */
 	private String interfaceName;
 
 	/**
-	 * Á¥ÊôhtmlÒ³ÃæÃû³Æ
+	 * htmlé¡µé¢æ–‡ä»¶
 	 */
 	private String htmlName;
 	
 	/**
-	 * Á¥ÊôjsÎÄ¼şÃû³Æ
+	 * éš¶å±jsæ–‡ä»¶å
 	 */
 	private String jsName;
 	
@@ -76,14 +76,6 @@ public class AutoFormatBean implements Serializable {
 
 	public void setPageName(String pageName) {
 		this.pageName = pageName;
-	}
-
-	public String getFunctionName() {
-		return functionName;
-	}
-
-	public void setFunctionName(String functionName) {
-		this.functionName = functionName;
 	}
 
 	public String getMdValue() {
@@ -126,4 +118,17 @@ public class AutoFormatBean implements Serializable {
 		this.jsName = jsName;
 	}
 	
+	public Integer getUniqueCode() {
+		return uniqueCode;
+	}
+
+	public void setUniqueCode(Integer uniqueCode) {
+		this.uniqueCode = uniqueCode;
+	}
+
+	public void outputBeanInfo(){
+		System.out.println("ç‰¹æ®Šæ ‡è¯†Code :"+uniqueCode+"  æ¨¡å—å: "+moduleName + "  æœåŠ¡å: " + serviceName + 
+				"  æ¥å£å:"+interfaceName + " MD5Öµ :" + mdValue+
+				"  jsæ–‡ä»¶å: "+jsName + "  htmlæ–‡ä»¶å "+htmlName + "  éš¶å±é¡µé¢åç§°: "+pageName);
+	}
 }

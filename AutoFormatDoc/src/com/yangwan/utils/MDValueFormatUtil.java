@@ -15,27 +15,27 @@ import com.yangwan.bean.AutoFormatBean;
 
 /**
  * @author yangwan
- * ×Ô¶¯½âÎöMD5Öµ(Ö÷Òª½âÎö¶ÔÏóÎªbwaerpc-i.jsÎÄ¼þ)
+ * ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½MD5Öµ(ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªbwaerpc-i.jsï¿½Ä¼ï¿½)
  */
 public class MDValueFormatUtil{
 
 	/**
-	 * Êý¾Ý¿â²Ù×÷¹¤¾ß
+	 * ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	private DataBaseUtils dataBaseUtils;
 	
 	/**
-	 * ´æ´¢½Ó¿ÚÐÅÏ¢µÄÁÐ±í
+	 * ï¿½æ´¢ï¿½Ó¿ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½Ð±ï¿½
 	 */
-	private Map<String, AutoFormatBean> autoFormatMap;
+	private Map<Integer, AutoFormatBean> autoFormatMap;
 	
 	/**
-	 * ½âÎöÎÄ¼þÂ·¾¶
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Â·ï¿½ï¿½
 	 */
 	private String filePath;
 	
 	/**
-	 * ÎÄ¼þÃû
+	 * ï¿½Ä¼ï¿½ï¿½ï¿½
 	 */
 	private String fileName;
 	
@@ -45,27 +45,22 @@ public class MDValueFormatUtil{
 	
 	public static final int VALUE_LINE = 2;
 	
-	public MDValueFormatUtil(Map<String, AutoFormatBean> autoFormatMap, String filePath) {
+	public MDValueFormatUtil(Map<Integer, AutoFormatBean> autoFormatMap, String filePath) {
 		this.autoFormatMap = autoFormatMap;
 		this.filePath = filePath;
 	}
 	
-	public MDValueFormatUtil(Map<String, AutoFormatBean> autoFormatMap) {
+	public MDValueFormatUtil(Map<Integer, AutoFormatBean> autoFormatMap) {
 		this.autoFormatMap = autoFormatMap;
 	}
 	
-	/**
-	 * ·µ»ØÎÄ¼þ²Ù×÷Á÷
-	 * @return
-	 * @throws Exception
-	 */
 	private FileInputStream getFileOperateStream() throws Exception {
 		FileInputStream fis = null;
 		if(filePath != null){
 			File file = new File(filePath);
 			fis = new FileInputStream(file);
 		}else{
-			System.out.println("MDValueFormatUtilÎÄ¼þÂ·¾¶Îª¿Õ");
+			System.out.println("MDValueFormatUtilï¿½Ä¼ï¿½Â·ï¿½ï¿½Îªï¿½ï¿½");
 		}
 		return fis;
 	}
@@ -80,13 +75,9 @@ public class MDValueFormatUtil{
 		}
 	}
 	
-	/**
-	 * ×Ô¶¯½âÎö³ÌÐò »ñÈ¡MD5 moduleName interfaceName service
-	 * @return
-	 */
 	public void autoAnalysisProcess(){
 		if(autoFormatMap == null){
-			autoFormatMap = new HashMap<String, AutoFormatBean>();
+			autoFormatMap = new HashMap<Integer, AutoFormatBean>();
 		}
 		FileInputStream fis = null;
 		BufferedReader br = null;
@@ -94,8 +85,8 @@ public class MDValueFormatUtil{
 			fis = getFileOperateStream();
 			InputStreamReader isr = new InputStreamReader(fis);
 			br = new BufferedReader(isr);
-		}catch(Exception e){  //ÎÄ¼þÁ÷²Ù×÷Òì³£
-			System.out.println("»ñÈ¡ÎÄ¼þ¶ÁÈ¡Á÷Ê§°Ü,ÎÄ¼þÂ·¾¶ :"+this.filePath);
+		}catch(Exception e){  
+			System.out.println("è¯»å–æ–‡ä»¶å¤±è´¥:"+this.filePath);
 			e.getStackTrace();
 		}
 		String lineContent = "";
@@ -105,15 +96,16 @@ public class MDValueFormatUtil{
 		AutoFormatBean tempBean = new AutoFormatBean();
 		try{
 			while((lineContent = br.readLine()) != null){
+				lineContent = lineContent.trim();
 				switch(mathLine(lineContent)){
 				case FUNCTION_LINE:
 					 pattern = "BWAE(\\.)(\\w+)(\\.)(\\w+)(\\.)(\\w+)(\\D+)";
 					 r = Pattern.compile(pattern);
 					 m = r.matcher(lineContent);
 					 if (m.find()) {
-						 tempBean.setModuleName(m.group(2)); //ÉèÖÃÄ£¿éÃû
-						 tempBean.setServiceName(m.group(4));   //ÉèÖÃ·þÎñÃû
-						 tempBean.setInterfaceName(m.group(6));  //ÉèÖÃ½Ó¿ÚÃû
+						 tempBean.setModuleName(m.group(2)); 
+						 tempBean.setServiceName(m.group(4));   
+						 tempBean.setInterfaceName(m.group(6));  
 					 }
 					break;
 				case VALUE_LINE:
@@ -121,9 +113,10 @@ public class MDValueFormatUtil{
 					 r = Pattern.compile(pattern);
 					 m = r.matcher(lineContent);
 					 if (m.find()) {
-						 tempBean.setMdValue(m.group(3)); //ÉèÖÃmd5Öµ
-						 
-						 autoFormatMap.put("", tempBean);
+						 tempBean.setMdValue(m.group(3));
+						 Integer uniqueCode = MyUtils.generateUniqueCode(tempBean.getModuleName()+tempBean.getServiceName() + tempBean.getInterfaceName());
+						 tempBean.setUniqueCode(uniqueCode);
+						 autoFormatMap.put(uniqueCode, tempBean);
 						 tempBean = new AutoFormatBean();
 					 }
 					 break;
@@ -133,17 +126,7 @@ public class MDValueFormatUtil{
 			}
 		}catch(Exception e){
 			e.printStackTrace();
-			System.out.println("ÎÄ¼þ¶ÁÈ¡´íÎó >>>>>>>>Utils:MDValueFormatUtil");
-		}
-	}
-	
-	public void saveToDataBase() throws Exception{
-		if(dataBaseUtils != null){
-			dataBaseUtils.getConnectionToSQL();
-			Connection connection = dataBaseUtils.getConnection();
-			
-		}else{
-			System.out.print(MDValueFormatUtil.class.toString() + "DataBaseUtilsÎª¿Õ");
+			System.out.println("è§£æžå¼‚å¸¸ >>>>>>>>Utils:MDValueFormatUtil");
 		}
 	}
 	
@@ -155,11 +138,11 @@ public class MDValueFormatUtil{
 		this.dataBaseUtils = dataBaseUtils;
 	}
 	
-	public Map<String, AutoFormatBean> getAutoFormatList() {
+	public Map<Integer, AutoFormatBean> getAutoFormatList() {
 		return autoFormatMap;
 	}
 
-	public void setAutoFormatList(Map<String, AutoFormatBean> autoFormatMap) {
+	public void setAutoFormatList(Map<Integer, AutoFormatBean> autoFormatMap) {
 		this.autoFormatMap = autoFormatMap;
 	}
 
