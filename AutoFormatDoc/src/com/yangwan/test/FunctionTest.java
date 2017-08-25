@@ -9,6 +9,7 @@ import java.util.regex.Pattern;
 import org.junit.Test;
 
 import com.yangwan.bean.AutoFormatBean;
+import com.yangwan.utils.DataBaseUtils;
 import com.yangwan.utils.MDValueFormatUtil;
 import com.yangwan.utils.MyUtils;
 import com.yangwan.utils.PageNameFormatUtil;
@@ -28,7 +29,7 @@ public class FunctionTest {
 	public void autoAnalysisProcess(){
 		Map<Integer, AutoFormatBean> autoFormatList = new HashMap<Integer, AutoFormatBean>();
 		mdValueFormatUtil = new MDValueFormatUtil(autoFormatList,
-				"C:\\Users\\yangwan\\WebstormProjects\\qmc-mgr_cash-page\\src\\site\\js\\bwaerpc-i.js");
+				"C:\\cash-spec-page\\src\\site\\js\\bwaerpc-i.js");
 		mdValueFormatUtil.autoAnalysisProcess();
 		for(Integer key : autoFormatList.keySet()){
 			autoFormatList.get(key).outputBeanInfo();
@@ -39,10 +40,11 @@ public class FunctionTest {
 	public void scanJsFile(){
 		Map<Integer, AutoFormatBean> autoFormatList = new HashMap<Integer, AutoFormatBean>();
 		mdValueFormatUtil = new MDValueFormatUtil(autoFormatList,
-				"C:\\Users\\yangwan\\WebstormProjects\\qmc-mgr_cash-page-temp\\src\\site\\js\\bwaerpc-i.js");
+				"C:\\cash-spec-page\\src\\site\\js\\bwaerpc-i.js");
 		mdValueFormatUtil.autoAnalysisProcess();
-		String workPath = "C:\\Users\\yangwan\\WebstormProjects\\qmc-mgr_cash-page-temp\\src\\site";
+		String workPath = "C:\\cash-spec-page\\src\\site";
 		pageNameFormatUtil = new PageNameFormatUtil(autoFormatList, workPath);
+		pageNameFormatUtil.setModuleName("cash-special");
 		pageNameFormatUtil.scanJsFile();
 		pageNameFormatUtil.scanHtmlFile();
 		for(Integer key : autoFormatList.keySet()){
@@ -96,4 +98,57 @@ public class FunctionTest {
 		map.put(2, "yangwan5");
 	}
 	
+	@Test
+    public void testDataBase(){
+    	DataBaseUtils dataBaseUtils = new DataBaseUtils();
+    	if(dataBaseUtils.getConnectionToSQL()){
+    		System.out.println("连接数据库成功");
+    	}
+    }
+	
+	@Test
+	public void cashSpecialAutoFormatData(){  //cash-special项目解析
+		Map<Integer, AutoFormatBean> autoFormatList = new HashMap<Integer, AutoFormatBean>();
+		mdValueFormatUtil = new MDValueFormatUtil(autoFormatList,
+				"C:\\Users\\yangwan\\git\\qmc-mgr_cash-spec-page\\src\\site\\js\\bwaerpc-i.js");
+		mdValueFormatUtil.autoAnalysisProcess();
+		String workPath = "C:\\Users\\yangwan\\git\\qmc-mgr_cash-spec-page\\src\\site";
+		pageNameFormatUtil = new PageNameFormatUtil(autoFormatList, workPath);
+		pageNameFormatUtil.setModuleName("cash-special");
+		pageNameFormatUtil.scanJsFile();
+		pageNameFormatUtil.scanHtmlFile();
+//		for(Integer key : autoFormatList.keySet()){
+//			autoFormatList.get(key).outputBeanInfo();
+//		}
+		DataBaseUtils dataBaseUtils = new DataBaseUtils();
+		try{
+			dataBaseUtils.saveAutoFormatData(autoFormatList);
+		}catch(Exception e){
+			System.out.println("ERROR!!!");
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void cashAutoFormatData(){  //cash项目解析
+		Map<Integer, AutoFormatBean> autoFormatList = new HashMap<Integer, AutoFormatBean>();
+		mdValueFormatUtil = new MDValueFormatUtil(autoFormatList,
+				"C:\\Users\\yangwan\\git\\qmc-mgr_cash-page\\src\\site\\js\\bwaerpc-i.js");
+		mdValueFormatUtil.autoAnalysisProcess();
+		String workPath = "C:\\Users\\yangwan\\git\\qmc-mgr_cash-page\\src\\site";
+		pageNameFormatUtil = new PageNameFormatUtil(autoFormatList, workPath);
+		pageNameFormatUtil.setModuleName("cash");
+		pageNameFormatUtil.scanJsFile();
+		pageNameFormatUtil.scanHtmlFile();
+//		for(Integer key : autoFormatList.keySet()){
+//			autoFormatList.get(key).outputBeanInfo();
+//		}
+		DataBaseUtils dataBaseUtils = new DataBaseUtils();
+		try{
+			dataBaseUtils.saveAutoFormatData(autoFormatList);
+		}catch(Exception e){
+			System.out.println("ERROR!!!");
+			e.printStackTrace();
+		}
+	}
 }

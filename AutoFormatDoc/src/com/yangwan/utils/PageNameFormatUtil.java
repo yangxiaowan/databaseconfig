@@ -7,6 +7,7 @@ import java.io.FilenameFilter;
 import java.io.InputStreamReader;
 import java.net.URLDecoder;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +28,7 @@ public class PageNameFormatUtil {
 	/**
 	 * 模块名
 	 */
-	private String moduleName = "cash";
+	private String moduleName = "temp";
 	/**
 	 * 前端项目路径，精确到**page。
 	 * 例如C:\Users\yangwan\WebstormProjects\qmc-mgr_cash-page
@@ -42,9 +43,14 @@ public class PageNameFormatUtil {
 	
 	private Map<Integer, List<AutoFormatBean>> htmlMap;
 	
+	
 	public PageNameFormatUtil(Map<Integer,AutoFormatBean> autoFormatMap, String pageWorkPath){
 		this.autoFormatMap = autoFormatMap;
 		this.pageWorkPath = pageWorkPath;
+	}
+	
+	public void setModuleName(String moduleName){
+		this.moduleName = moduleName;
 	}
 	
 	/**
@@ -77,6 +83,11 @@ public class PageNameFormatUtil {
 				String lineContent = "";
 				while((lineContent = br.readLine()) != null){ //扫描每个js文件
 					lineContent = lineContent.trim();
+					if(tempFile.getName().equals("cash-imageChangeRecode.js") && lineContent.equals("BWAE.cash_special.ImageReplaceService.mergeImageChangeRecord(")){
+						System.out.println("**");
+						System.out.println("**");
+						System.out.println("**");
+					}
 					Pattern pattern = Pattern.compile("^BWAE(\\.)(\\w+)(\\.)(\\w+)(\\.)(\\w+)");
 					Matcher m = pattern.matcher(lineContent);
 					if(m.find()){
@@ -86,8 +97,23 @@ public class PageNameFormatUtil {
 						Integer uniqueCode = MyUtils.generateUniqueCode(moduleName + serviceName + interfaceName);
 						AutoFormatBean autoFormatBean = autoFormatMap.get(uniqueCode);
 						if(autoFormatBean != null){
-							autoFormatBean.setJsName(tempFile.getName());
-							jsListBean.add(autoFormatBean);
+							if(autoFormatBean.getJsName() != null){ //已经找到隶属的js文件
+								AutoFormatBean tempBean = new AutoFormatBean();
+								tempBean.setModuleName(autoFormatBean.getModuleName());
+								tempBean.setServiceName(autoFormatBean.getServiceName());
+								tempBean.setInterfaceName(autoFormatBean.getInterfaceName());
+								tempBean.setMdValue(autoFormatBean.getMdValue());
+								tempBean.setJsName(tempFile.getName());//复用方法设置隶属js文件
+								jsListBean.add(tempBean);
+								Date now = new Date();
+								Integer tempCode = MyUtils.generateUniqueCode(String.valueOf(now.getTime()));
+								tempBean.setUniqueCode(tempCode);
+								autoFormatMap.put(tempCode, tempBean); //保持uniqueCode的唯一性
+							}else{
+								autoFormatBean.setJsName(tempFile.getName()); //已经找到隶属的js文件
+								jsListBean.add(autoFormatBean);
+							}
+							
 						}else{
 							System.out.println(">>>>>>>>"+"模块名"+moduleName+" 服务名"+serviceName+" 接口名"+interfaceName + " 隶属js文件" + tempFile.getName());
 						}
