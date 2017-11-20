@@ -15,28 +15,15 @@ import com.yangwan.bean.AutoFormatBean;
 
 /**
  * @author yangwan
- * �Զ�����MD5ֵ(��Ҫ��������Ϊbwaerpc-i.js�ļ�)
  */
 public class MDValueFormatUtil{
 
-	/**
-	 * ���ݿ��������
-	 */
 	private DataBaseUtils dataBaseUtils;
 	
-	/**
-	 * �洢�ӿ���Ϣ���б�
-	 */
 	private Map<Integer, AutoFormatBean> autoFormatMap;
 	
-	/**
-	 * �����ļ�·��
-	 */
 	private String filePath;
 	
-	/**
-	 * �ļ���
-	 */
 	private String fileName;
 	
 	public static final int ERROR_LINE = 0;

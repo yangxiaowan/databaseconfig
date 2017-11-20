@@ -83,11 +83,6 @@ public class PageNameFormatUtil {
 				String lineContent = "";
 				while((lineContent = br.readLine()) != null){ //扫描每个js文件
 					lineContent = lineContent.trim();
-					if(tempFile.getName().equals("cash-imageChangeRecode.js") && lineContent.equals("BWAE.cash_special.ImageReplaceService.mergeImageChangeRecord(")){
-						System.out.println("**");
-						System.out.println("**");
-						System.out.println("**");
-					}
 					Pattern pattern = Pattern.compile("^BWAE(\\.)(\\w+)(\\.)(\\w+)(\\.)(\\w+)");
 					Matcher m = pattern.matcher(lineContent);
 					if(m.find()){
