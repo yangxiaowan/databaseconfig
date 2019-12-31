@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1a212c64-5094-4b25-99d1-19c1f9f91067" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-customize-datasource/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-customize-datasource/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-customize-datasource/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-customize-datasource/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-customize-datasource/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-customize-datasource/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-customize-datasource/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-customize-datasource/src/main/java/com/db/jdbccustomizedatasource/JdbcCustomizeDatasourceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-customize-datasource/src/main/java/com/db/jdbccustomizedatasource/config/Dbcp2DataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-customize-datasource/src/main/java/com/db/jdbccustomizedatasource/entity/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-customize-datasource/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-customize-datasource/src/test/java/com/db/jdbccustomizedatasource/JdbcCustomizeDatasourceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-simple-datasource/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-simple-datasource/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-simple-datasource/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-simple-datasource/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-simple-datasource/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-simple-datasource/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-simple-datasource/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-simple-datasource/src/main/java/com/db/jdbcsimpledatasource/JdbcSimpleDatasourceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-simple-datasource/src/main/java/com/db/jdbcsimpledatasource/config/MyDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-simple-datasource/src/main/java/com/db/jdbcsimpledatasource/entity/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-simple-datasource/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdbc-simple-datasource/src/test/java/com/db/jdbcsimpledatasource/JdbcSimpleDatasourceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/create_table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../datasource/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../datasource/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../datasource/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../datasource/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../datasource/src/main/java/com/yangwan/datasource/DatasourceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../datasource/src/main/java/com/yangwan/datasource/config/DataSourceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../datasource/src/main/java/com/yangwan/datasource/config/MyDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../datasource/src/main/java/com/yangwan/datasource/entity/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../datasource/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../datasource/src/test/java/com/yangwan/datasource/DatasourceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../datasource/src/test/sql/create_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AutoFormatDoc/bin/com/yangwan/utils/HiveToOracleTableAutoFormat.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AutoFormatDoc/bin/com/yangwan/utils/HiveToOracleTableAutoFormat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AutoFormatDoc/src/com/yangwan/utils/HiveToOracleTableAutoFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AutoFormatDoc/src/com/yangwan/utils/HiveToOracleTableAutoFormat.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/jdbc-simple-datasource/target/" />
+    <ignored path="$PROJECT_DIR$/jdbc-customize-datasource/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="bule" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jdbc-customize-datasource/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="11" column="41" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jdbc-customize-datasource/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="3" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jdbc-customize-datasource/src/test/java/com/db/jdbccustomizedatasource/JdbcCustomizeDatasourceApplicationTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jdbc-customize-datasource/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-204">
+              <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jdbc-customize-datasource/src/main/java/com/db/jdbccustomizedatasource/config/Dbcp2DataSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/bb874972-5a44-4e15-8a95-0e2a78677c24/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="22" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sql/create_table.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="455">
+              <caret line="19" column="16" selection-start-line="19" selection-end-line="19" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jdbc-customize-datasource/src/main/java/com/db/jdbccustomizedatasource/JdbcCustomizeDatasourceApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+              <folding>
+                <element signature="e#279#280#0" expanded="true" />
+                <element signature="e#364#365#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jdbc-customize-datasource/src/main/java/com/db/jdbccustomizedatasource/entity/Student.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>poolEntryCreator</find>
+      <find>jdbc</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/jdbc-simple-datasource/.gitignore" />
+        <option value="$PROJECT_DIR$/jdbc-simple-datasource/src/main/java/com/db/jdbcsimpledatasource/entity/Student.java" />
+        <option value="$PROJECT_DIR$/jdbc-simple-datasource/src/main/java/com/db/jdbcsimpledatasource/config/MyDataSource.java" />
+        <option value="$PROJECT_DIR$/jdbc-simple-datasource/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/jdbc-simple-datasource/src/test/java/com/db/jdbcsimpledatasource/JdbcSimpleDatasourceApplicationTests.java" />
+        <option value="$PROJECT_DIR$/jdbc-customize-datasource/src/main/java/com/db/jdbccustomizedatasource/entity/Student.java" />
+        <option value="$PROJECT_DIR$/jdbc-customize-datasource/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/jdbc-simple-datasource/pom.xml" />
+        <option value="$PROJECT_DIR$/jdbc-customize-datasource/pom.xml" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/bb874972-5a44-4e15-8a95-0e2a78677c24/console.sql" />
+        <option value="$PROJECT_DIR$/sql/create_table.sql" />
+        <option value="$PROJECT_DIR$/jdbc-customize-datasource/src/main/java/com/db/jdbccustomizedatasource/config/Dbcp2DataSource.java" />
+        <option value="$PROJECT_DIR$/jdbc-customize-datasource/src/test/java/com/db/jdbccustomizedatasource/JdbcCustomizeDatasourceApplicationTests.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="F:/tools/apache-maven-3.6.0" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="153" />
+    <option name="y" value="73" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="databaseconfig" type="b2602c69:ProjectViewProjectNode" />
+              <item name="databaseconfig" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="databaseconfig" type="b2602c69:ProjectViewProjectNode" />
+              <item name="databaseconfig" type="462c0819:PsiDirectoryNode" />
+              <item name="jdbc-customize-datasource" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="databaseconfig" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="databaseconfig" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-jdbc:5.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="databaseconfig" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-jdbc:5.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-jdbc-5.2.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="databaseconfig" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-jdbc:5.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-jdbc-5.2.2.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sql" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.db.jdbccustomizedatasource.entity" />
+      <recent name="com.db.jdbcsimpledatasource.config" />
+      <recent name="com.db.jdbcsimpledatasource.entity" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\yangwan\git\databaseconfig\sql" />
+      <recent name="F:\yangwan\git\databaseconfig" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.JdbcCustomizeDatasourceApplicationTests.springJdbcTemplateTest">
+    <configuration name="JdbcCustomizeDatasourceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbc-customize-datasource" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.db.jdbccustomizedatasource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.db.jdbccustomizedatasource" />
+      <option name="MAIN_CLASS_NAME" value="com.db.jdbccustomizedatasource.JdbcCustomizeDatasourceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcCustomizeDatasourceApplicationTests.springDataSourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbc-customize-datasource" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.db.jdbccustomizedatasource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.db.jdbccustomizedatasource" />
+      <option name="MAIN_CLASS_NAME" value="com.db.jdbccustomizedatasource.JdbcCustomizeDatasourceApplicationTests" />
+      <option name="METHOD_NAME" value="springDataSourceTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcCustomizeDatasourceApplicationTests.springJdbcTemplateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbc-customize-datasource" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.db.jdbccustomizedatasource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.db.jdbccustomizedatasource" />
+      <option name="MAIN_CLASS_NAME" value="com.db.jdbccustomizedatasource.JdbcCustomizeDatasourceApplicationTests" />
+      <option name="METHOD_NAME" value="springJdbcTemplateTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcSimpleDatasourceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbc-simple-datasource" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.db.jdbcsimpledatasource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.db.jdbcsimpledatasource" />
+      <option name="MAIN_CLASS_NAME" value="com.db.jdbcsimpledatasource.JdbcSimpleDatasourceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcSimpleDatasourceApplicationTests.springDataSourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdbc-simple-datasource" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.db.jdbcsimpledatasource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.db.jdbcsimpledatasource" />
+      <option name="MAIN_CLASS_NAME" value="com.db.jdbcsimpledatasource.JdbcSimpleDatasourceApplicationTests" />
+      <option name="METHOD_NAME" value="springDataSourceTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcCustomizeDatasourceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="jdbc-customize-datasource" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.db.jdbccustomizedatasource.JdbcCustomizeDatasourceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcSimpleDatasourceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="jdbc-simple-datasource" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.db.jdbcsimpledatasource.JdbcSimpleDatasourceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.JdbcCustomizeDatasourceApplicationTests.springJdbcTemplateTest" />
+        <item itemvalue="JUnit.JdbcCustomizeDatasourceApplicationTests.springDataSourceTest" />
+        <item itemvalue="JUnit.JdbcCustomizeDatasourceApplicationTests" />
+        <item itemvalue="JUnit.JdbcSimpleDatasourceApplicationTests" />
+        <item itemvalue="JUnit.JdbcSimpleDatasourceApplicationTests.springDataSourceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a212c64-5094-4b25-99d1-19c1f9f91067" name="Default Changelist" comment="" />
+      <created>1577608016007</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577608016007</updated>
+      <workItem from="1577608022140" duration="4241000" />
+      <workItem from="1577795849480" duration="7310000" />
+      <workItem from="1577805688173" duration="3616000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="JdbcSimpleDatasourceApplicationTests_springDataSourceTest - 2019.12.29 at 17h 00m 25s.xml">
+      <configuration name="JdbcSimpleDatasourceApplicationTests.springDataSourceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JdbcSimpleDatasourceApplicationTests - 2019.12.29 at 17h 38m 39s.xml">
+      <configuration name="JdbcSimpleDatasourceApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JdbcSimpleDatasourceApplicationTests - 2019.12.29 at 17h 39m 23s.xml">
+      <configuration name="JdbcSimpleDatasourceApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JdbcCustomizeDatasourceApplicationTests - 2019.12.31 at 22h 45m 32s.xml">
+      <configuration name="JdbcCustomizeDatasourceApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JdbcCustomizeDatasourceApplicationTests_springDataSourceTest - 2019.12.31 at 22h 46m 00s.xml">
+      <configuration name="JdbcCustomizeDatasourceApplicationTests.springDataSourceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JdbcCustomizeDatasourceApplicationTests_springDataSourceTest - 2019.12.31 at 22h 48m 23s.xml">
+      <configuration name="JdbcCustomizeDatasourceApplicationTests.springDataSourceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JdbcCustomizeDatasourceApplicationTests_springDataSourceTest - 2019.12.31 at 22h 56m 52s.xml">
+      <configuration name="JdbcCustomizeDatasourceApplicationTests.springDataSourceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JdbcCustomizeDatasourceApplicationTests_springDataSourceTest - 2019.12.31 at 23h 33m 42s.xml">
+      <configuration name="JdbcCustomizeDatasourceApplicationTests.springDataSourceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JdbcCustomizeDatasourceApplicationTests_springJdbcTemplateTest - 2019.12.31 at 23h 49m 42s.xml">
+      <configuration name="JdbcCustomizeDatasourceApplicationTests.springJdbcTemplateTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JdbcCustomizeDatasourceApplicationTests_springJdbcTemplateTest - 2019.12.31 at 23h 59m 29s.xml">
+      <configuration name="JdbcCustomizeDatasourceApplicationTests.springJdbcTemplateTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="15167000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28104925" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Database Console" weight="0.3292683" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.51552105" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" visible="true" weight="0.3292683" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3292683" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.3292683" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.32976446" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32976446" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbc-simple-datasource/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbc-simple-datasource/mvnw.cmd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://F:/tools/repository/mysql/mysql-connector-java/8.0.18/mysql-connector-java-8.0.18.jar!/com/mysql/cj/jdbc/Driver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbc-customize-datasource/src/main/java/com/db/jdbcsimpledatasource/config/MyDataSource.java" />
+    <entry file="file://$PROJECT_DIR$/jdbc-customize-datasource/src/main/java/com/db/jdbcsimpledatasource/JdbcSimpleDatasourceApplication.java" />
+    <entry file="file://F:/tools/repository/com/zaxxer/HikariCP/3.4.1/HikariCP-3.4.1.pom">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://F:/tools/repository/com/zaxxer/HikariCP/3.4.1/HikariCP-3.4.1.jar!/com/zaxxer/hikari/HikariConfigMXBean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/tools/repository/com/zaxxer/HikariCP/3.4.1/HikariCP-3.4.1.jar!/com/zaxxer/hikari/HikariConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/tools/repository/com/zaxxer/HikariCP/3.4.1/HikariCP-3.4.1.jar!/com/zaxxer/hikari/HikariDataSource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/tools/repository/com/zaxxer/HikariCP/3.4.1/HikariCP-3.4.1.jar!/com/zaxxer/hikari/pool/HikariPool.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/tools/repository/org/springframework/boot/spring-boot-starter/2.2.2.RELEASE/spring-boot-starter-2.2.2.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1224" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbc-simple-datasource/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/tools/repository/org/springframework/boot/spring-boot-starter-parent/2.2.2.RELEASE/spring-boot-starter-parent-2.2.2.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3808">
+          <caret line="112" column="35" selection-start-line="112" selection-start-column="35" selection-end-line="112" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbc-customize-datasource/mvnw.cmd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://F:/tools/repository/org/springframework/boot/spring-boot/2.2.2.RELEASE/spring-boot-2.2.2.RELEASE.jar!/org/springframework/boot/jdbc/DataSourceBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="63" column="55" selection-start-line="63" selection-start-column="55" selection-end-line="63" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbc-customize-datasource/HELP.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbc-simple-datasource/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="32" column="40" selection-start-line="29" selection-start-column="6" selection-end-line="34" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/tools/repository/org/springframework/boot/spring-boot-starter-jdbc/2.2.2.RELEASE/spring-boot-starter-jdbc-2.2.2.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="60" column="17" lean-forward="true" selection-start-line="55" selection-start-column="4" selection-end-line="60" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbc-simple-datasource/src/main/java/com/db/jdbcsimpledatasource/config/MyDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbc-simple-datasource/src/main/java/com/db/jdbcsimpledatasource/entity/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbc-simple-datasource/src/main/java/com/db/jdbcsimpledatasource/JdbcSimpleDatasourceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbc-simple-datasource/src/test/java/com/db/jdbcsimpledatasource/JdbcSimpleDatasourceApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/tools/repository/org/springframework/spring-jdbc/5.2.2.RELEASE/spring-jdbc-5.2.2.RELEASE.jar!/org/springframework/jdbc/core/JdbcOperations.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/bb874972-5a44-4e15-8a95-0e2a78677c24/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/create_table.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="19" column="16" selection-start-line="19" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbc-customize-datasource/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="3" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbc-customize-datasource/src/main/java/com/db/jdbccustomizedatasource/JdbcCustomizeDatasourceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding>
+            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#364#365#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbc-customize-datasource/src/main/java/com/db/jdbccustomizedatasource/entity/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbc-customize-datasource/src/main/java/com/db/jdbccustomizedatasource/config/Dbcp2DataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbc-customize-datasource/src/test/java/com/db/jdbccustomizedatasource/JdbcCustomizeDatasourceApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbc-customize-datasource/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jdbc-customize-datasource/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>databaseconfig</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
