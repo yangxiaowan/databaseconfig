@@ -37,7 +37,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.18</version>
+            <version>8.0.28</version>
         </dependency>
         <!-- 提供操作数据库的标准口径 -->
         <dependency>
